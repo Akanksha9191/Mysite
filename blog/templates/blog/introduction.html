@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titlepage %}home{% endblock titlepage %}
+{% block content %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'Blog/introduction.css' %}">
+<link rel="stylesheet" href="{% static 'Blog/card.css' %}">
+
+{% endblock css %}
+
+<div class='container'>
+    <div class='intro-content'>
+    <p><span>Hello, 
+        <br/>
+        I'm Akanksha Bhalsing !</span>
+    <br/>
+    I am a Computer Engineering graduate from G.H. Raisoni College of Engineering and Management, Pune, with a CGPA of 7.91. I have a strong interest in software development and I’m currently pursuing a Full Stack Development course at Hematite Infotech Pvt. Ltd.
+    <br/>
+    As part of my learning journey, I’ve gained hands-on experience with technologies like HTML, CSS, JavaScript, Python, Git, and Bootstrap, and I’m also learning Django and React for building dynamic web applications.
+    </p>
+    <img src="" alt="my img">
+    </div>
+
+    <div class='card-container'>
+    <h1>Latest Fitness Posts</h1>
+    {% comment %} <div class='card'>
+        <img src="" alt="first img">
+        <div class='card-body'>
+            <h2>Title</h2>
+            <p>Summary</p>
+            <a href="">Read More</a>
+
+        </div>
+    </div> {% endcomment %}
+    <div class='allpost-container'>
+        {% include "blog/includes/card.html" %}
+        {% include "blog/includes/card.html" %}
+        {% include "blog/includes/card.html" %}
+         
+    </div>
+    <div class='allpost-explore'><a href="{% url 'all-post' %} ">Explore more...</a></div> 
+    
+    </div>
+
+    <div class='about-container'>
+    <h1>What This Fitness Blog Is About</h1>
+    <p>
+    Fitness is a journey that transforms not just your body, but your entire lifestyle. It’s about staying active, eating well, and maintaining a positive mindset. In today’s fast-paced world, health often takes a backseat—but with small, consistent efforts, anyone can take charge of their well-being.
+    <br/>
+    The purpose of this blog is to share simple, useful, and inspiring fitness content that encourages people to stay motivated and make healthier choices. Whether you're a beginner or someone getting back on track, my goal is to provide tips, routines, and encouragement that actually work.
+    <br/>
+    I believe fitness is not about having a perfect body, but about becoming stronger, more energetic, and confident. Through this blog, I want to help you discover the power of a healthy lifestyle—one post at a time.
+    </p>
+    </div>
+  
+    <footer>
+        <p><a href="{% url 'contact-form' %}">Contact with Me</a></p>
+        <p> Email: <a href="mailto:akankshabhalsing0091@gmail.com">akankshabhalsing0091@gmail.com</a></p>
+        <a href="https://www.linkedin.com/in/akanksha-bhalsing-a9307a225/">LinkedIn</a>
+        <a href="https://github.com/Akanksha9191/Git-Project">GitHub</a>
+        <br>
+        <p>© 2025 Akanksha Bhalsing | All Rights Reserved</p>
+    </footer>
+</div>
+{% endblock%}

@@ -1,0 +1,10 @@
+.postdetails{
+    margin: auto;
+    text-align: center;
+    margin: 20px;
+    border: 2px solid #1b454c;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px #1b454c;
+    background-color: #1b454c;
+    color: white;
+}

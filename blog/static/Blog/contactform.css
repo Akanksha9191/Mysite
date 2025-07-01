@@ -1,0 +1,69 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #c7e7ed, #fff);
+}
+
+.contactform {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.contactform h1 {
+    text-align: center;
+    color: #1b454c;
+}
+
+.contactform label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.contactform input,
+.contactform textarea,
+.contactform select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.contactform button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1b454c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contactform button:hover {
+    background-color: #004d40;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contactform {
+        margin: 30px 20px;
+        padding: 20px;
+    }
+
+    .contactform button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

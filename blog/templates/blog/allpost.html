@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titlepage %}All post{% endblock titlepage %}
+{% block css %}
+<link rel='stylesheet' href='{% static "Blog/allpost.css" %}'>
+<link rel='stylesheet' href="{% static 'Blog/card.css' %}">
+{% endblock  %}
+{% block content %}
+<div class='allpost-section'>
+    <h2>All Post</h2>
+    <p>
+        Welcome to the complete list of fitness posts! Here you'll find helpful articles, tips, and guides covering different aspects of fitness—from workouts and healthy habits to motivation and wellness. Whether you're just starting out or continuing your journey, there’s something here for you.
+    </p>
+
+<div class='post-card'>
+    {% include "blog/includes/card.html" %}
+    {% include "blog/includes/card.html" %}
+    {% include "blog/includes/card.html" %}
+    {% include "blog/includes/card.html" %}{% include "blog/includes/card.html" %}{% include "blog/includes/card.html" %}{% include "blog/includes/card.html" %}
+</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background: linear-gradient(to top, #151616, #186874, #219ed0); */
+    background: linear-gradient(to bottom,#151616, #115b66, #63c4d3);
+}
+.allpost-section{
+    margin: 20px;
+}
+.allpost-section h2{
+    font-size: 30px;
+    margin: 20px;
+    color: white;
+    text-align: center;
+}
+.allpost-section p{
+    color: aliceblue;
+    margin: 40px ;
+}
+
+.post-card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+
