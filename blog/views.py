@@ -1,54 +1,35 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import ContactForm
-from .models import Contact
-from django.views.generic import View
+from django.views.generic import View, TemplateView
 
-# Create your views here.
-def blog_content(request):
-    return render(request, 'blog/introduction.html')
+class blog_content(TemplateView):
+    template_name = "blog/introduction.html"
 
-def blog_allpost(request):
-    return render(request, 'blog/allpost.html')
-def blog_postdetails(request):
-    return render(request, 'blog/postdetails.html')
+class blog_allpost(TemplateView):
+    template_name = "blog/allpost.html"
+    
+class blog_postdetails(TemplateView):
+    template_name ="blog/postdetails.html"
 
-def contact_view(request):
-    if request.method == 'POST':
+class contact_view(View):
+    def get(self, request):
+        form = ContactForm()
+        return render(request, 'blog/contactform.html',{
+            'form':form
+        })
+
+    def post(self, request):
         form = ContactForm(request.POST)
         if form.is_valid():
-            formdata = Contact(
-                user_name =form.cleaned_data['user_name'],
-                email = form.cleaned_data['email'],
-                message= form.cleaned_data['message']
-            )
-            formdata.save()
-            return HttpResponseRedirect('/thank-you')
-        
-    form = ContactForm()  
-    return render(request, 'blog/contactform.html',
-                  {
-                    'form':form
-                  }
-                 )
+            form.save()
+            return HttpResponseRedirect('thank-you')
     
-# class contact_view(View):
-#     def get(self, request):
-#         form = ContactForm()
-#         return render(request, 'blog/contactform.html',{
-#             'form':form
-#         })
+        return render(request, 'blog/contactform.html',{
+            'form':form
+        })
+        
+class thankyou(TemplateView):
+    template_name = "blog/thankyou.html"
 
-#     def post(self, request):
-#         form = ContactForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return HttpResponseRedirect('/thank-you')
-    
-#         return render(request, 'blog/contactform.html',{
-#             'form':form
-#         })
-        
-# def thankyou(request):
-#     return render(request, 'blog/thankyou.html')
 

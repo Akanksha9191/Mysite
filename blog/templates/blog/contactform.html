@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{% static 'Blog/contactform.css' %}">
 {% endblock  %}
 {% block content %}
-<form action='/', method='POST' , class='contactform'> 
+<form action="{% url 'contact-form' %}" method='POST' class='contactform'> 
     <h1>Contact Us</h1>
     <br>
    {% csrf_token %} 
