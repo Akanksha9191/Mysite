@@ -1,0 +1,65 @@
+/* uploadform.css */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #c3eaef;
+}
+.uploadform-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.uploadform-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.uploadform-container label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.uploadform-container input[type="text"],
+.uploadform-container input[type="file"],
+.uploadform-container textarea,
+.uploadform-container select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.uploadform-container textarea {
+    resize: vertical;
+}
+
+.uploadform-container button[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.uploadform-container button[type="submit"]:hover {
+    background-color: #218838;
+}

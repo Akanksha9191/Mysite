@@ -2,8 +2,8 @@
 {% load static %}
 {% block titlepage %}All post{% endblock titlepage %}
 {% block css %}
-<link rel='stylesheet' href='{% static "Blog/allpost.css" %}'>
-<link rel='stylesheet' href="{% static 'Blog/card.css' %}">
+<link rel='stylesheet' href='{% static "Blog/allpost.css" %}'/>
+<link rel="stylesheet" href="{% static 'Blog/card.css' %}" />
 {% endblock  %}
 {% block content %}
 <div class='allpost-section'>
@@ -11,12 +11,23 @@
     <p>
         Welcome to the complete list of fitness posts! Here you'll find helpful articles, tips, and guides covering different aspects of fitness—from workouts and healthy habits to motivation and wellness. Whether you're just starting out or continuing your journey, there’s something here for you.
     </p>
+</div>
 
 <div class='post-card'>
     {% include "blog/includes/card.html" %}
-    {% include "blog/includes/card.html" %}
-    {% include "blog/includes/card.html" %}
-    {% include "blog/includes/card.html" %}{% include "blog/includes/card.html" %}{% include "blog/includes/card.html" %}{% include "blog/includes/card.html" %}
+    
 </div>
+
+<div  class='add-btn'>
+    <a href='{% url "upload-form" %}'>Add New Post Here..</a>
 </div>
+
+ <footer>
+        <p><a href="{% url 'contact-form' %}">Contact with Me</a></p>
+        <p> Email: <a href="mailto:akankshabhalsing0091@gmail.com">akankshabhalsing0091@gmail.com</a></p>
+        <a href="https://www.linkedin.com/in/akanksha-bhalsing-a9307a225/">LinkedIn</a>
+        <a href="https://github.com/Akanksha9191/Git-Project">GitHub</a>
+        <br>
+        <p>© 2025 Akanksha Bhalsing | All Rights Reserved</p>
+    </footer>
 {% endblock content %}

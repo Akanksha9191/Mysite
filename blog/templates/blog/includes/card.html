@@ -1,12 +1,16 @@
 
 <header>
+    {% for post in details %}
     <div class='card'>
-        <img src="" alt="first img">
+        <img src="{{post.image.url}}" alt="first img">
         <div class='card-body'>
-            <h2>Title</h2>
-            <p>Summary</p>
-            <a href="{% url 'post-details' %}">Read More</a>
-
+            <h2>{{post.title}}</h2>
+            <p>{{post.summary}}</p>
+            <p class="date">{{post.date}}</p>
+            <br/>
+            <a href="{% url 'post-details' post.id %}">Read More</a>
+            
         </div>
     </div>
+    {% endfor %}
 </header>

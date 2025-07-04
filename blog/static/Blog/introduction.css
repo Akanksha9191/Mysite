@@ -6,7 +6,7 @@ body {
 
 /* Intro Section */
 .intro-content {
-  background: linear-gradient(to bottom, #151616, #186874, #219ed0);
+  background: linear-gradient(to bottom, #151616, #186874, #72a0af);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -73,19 +73,14 @@ body {
 .card-container h1{
     text-align: center;
 }
-.card-container h1 a{
-  text-decoration: none;
-  color:#11353a;
-  width: 100%;
-  
-  margin-bottom: 20px;
-}
+
 
 .allpost-container{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  overflow-x: auto;
 }
 .allpost-explore{
   text-align: center;
@@ -97,7 +92,8 @@ body {
   background: #070707;
   border-radius: 6px;
   font-size: 16px;
-  padding: 10px;
+  padding: 10px 40px;
+  margin: 20px;
 }
 
 @media screen and (max-width: 768px) {

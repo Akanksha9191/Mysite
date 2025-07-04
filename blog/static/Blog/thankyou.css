@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+}
+.thankyou-container{
+    text-align: center;
+    margin: 100px;
+}
+.thankyou-container h1{
+    font-size: 40px;
+    color:#11353a;
+    letter-spacing: 5px;
+
+}
+.thankyou-container a{
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 100px;
+    color: #11353a;
+    background-color: #fff;
+    
+}
+
+.thankyou-container a:hover{
+    background-color: #11353a;
+    color: #fff;
+}

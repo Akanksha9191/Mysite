@@ -6,13 +6,19 @@
 {% endblock  %}
 {% block content %}
 <div class='postdetails'>
-    <img src="" alt="first img">
+    
+    
         <div class='post-body'>
-            <h2>Title</h2>
-            <p>Summary</p>
+
+            <h2>{{title}}</h2>
+            <img src="{{ image.url }}" alt="first img">
+            {% comment %} <p>{{post.summary}}</p> {% endcomment %}
+            <p>{{content | linebreaks}}</p>
+            <p class='date'>{{date}}</p>
             
-
-        </div>
-
+        </div>  
+</div>
+<div  class='back-btn'>
+    <a href='{% url "all-post" %}'>Back To All Post</a>
 </div>
 {% endblock  %}

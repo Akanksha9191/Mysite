@@ -1,6 +1,14 @@
 {% extends "base.html" %}
+{% load static %}
 {% block titlepage %}SUCCESS!!{% endblock  %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'Blog/thankyou.css' %}"/>
+{% endblock  %}
 {% block content %}
-<h1>Thank you!</h1>
-
+        <div class='thankyou-container'>
+            <h1>Thank You!</h1>
+        
+            <p>Your message has been successfully sent. We’ll get back to you soon.</p>
+            <a href="/">Return to Home</a>
+        </div>
 {% endblock  %}

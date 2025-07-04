@@ -14,11 +14,11 @@
         <br/>
         I'm Akanksha Bhalsing !</span>
     <br/>
-    I am a Computer Engineering graduate from G.H. Raisoni College of Engineering and Management, Pune, with a CGPA of 7.91. I have a strong interest in software development and I’m currently pursuing a Full Stack Development course at Hematite Infotech Pvt. Ltd.
+    I'm from Pune, and I recently graduated with a B.Tech in Computer Engineering from G.H. Raisoni College of Engineering and Management with a CGPA of 7.91. I have a strong interest in software development and I’m currently pursuing a Full Stack Development course at Hematite Infotech Pvt. Ltd.
     <br/>
     As part of my learning journey, I’ve gained hands-on experience with technologies like HTML, CSS, JavaScript, Python, Git, and Bootstrap, and I’m also learning Django and React for building dynamic web applications.
     </p>
-    <img src="" alt="my img">
+    <img src="{% static 'Blog/photo.jpg' %}" alt="my img">
     </div>
 
     <div class='card-container'>
@@ -33,10 +33,7 @@
         </div>
     </div> {% endcomment %}
     <div class='allpost-container'>
-        {% include "blog/includes/card.html" %}
-        {% include "blog/includes/card.html" %}
-        {% include "blog/includes/card.html" %}
-         
+        {% include "blog/includes/card.html" %} 
     </div>
     <div class='allpost-explore'><a href="{% url 'all-post' %} ">Explore more...</a></div> 
     

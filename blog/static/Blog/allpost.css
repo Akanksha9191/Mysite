@@ -18,13 +18,70 @@ body{
     color: aliceblue;
     margin: 40px ;
 }
-
-.post-card{
+/* Add post button */
+.add-btn{
+    text-align: center;
+    margin: 50px;
+}
+.add-btn a{
+    text-decoration: none;
+    border: 1px solid rgb(244, 237, 237);
+    padding: 5px;
+    border-radius: 5px;
+    color: #ffffff;
+ 
+}
+.add-btn a:hover{
+    background-color: #ffffff;
+    color:#225b63;
+}
+/* card */
+/* .post-card{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     gap: 20px;
-    justify-content: center;
+    justify-content: center; 
+    padding: 20px;  
+} */
+
+/* Footer section */
+footer {
+    background-color: #0b3136;  /* deep greenish shade */
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+footer a {
+    color: #aad9d9;  /* soft teal */
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+    footer {
+        font-size: 14px;
+        padding: 20px 10px;
+    }
+
+    footer a {
+        margin: 5px;
+        display: block;
+    }
+}
 
 
